@@ -37,6 +37,7 @@ jobs:
         run: |
           git submodule update --init --remote --rebase --recursive android/Installer
           git submodule update --init --remote --rebase --recursive Baseband-guard
+          git submodule update --init --remote --rebase --recursive utils
           git submodule update --init --remote --rebase --recursive KernelSU
           sed -i -e '$a\'$'\n''CONFIG_KSU=n' arch/arm64/configs/alioth_kosminor_defconfig
           
@@ -107,6 +108,7 @@ jobs:
         run: |
           git submodule update --init --remote --rebase --recursive android/Installer
           git submodule update --init --remote --rebase --recursive Baseband-guard
+          git submodule update --init --remote --rebase --recursive utils
           git submodule update --init --remote --rebase --recursive KernelSU
           cd KernelSU
           git fetch --tags

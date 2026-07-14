@@ -48,6 +48,7 @@ jobs:
         run: |
           git submodule update --init --remote --rebase --recursive android/Installer
           git submodule update --init --remote --rebase --recursive Baseband-guard
+          git submodule update --init --remote --rebase --recursive utils
           git submodule update --init --remote --rebase --recursive KernelSU
           cd KernelSU
           git fetch --tags
